@@ -1,0 +1,39 @@
+syntax = "proto2";
+
+package pftp;
+
+message GetFile {
+  required bool unknown = 1;
+  required string file_name = 2;
+}
+
+message PlatformVersion {
+  required int32 major = 1;
+  required int32 minor = 2;
+  required int32 patch = 3;
+}
+
+message DeviceVersion {
+  required int32 major = 1;
+  required int32 minor = 2;
+  required int32 patch = 3;
+}
+
+message DeviceInfo {
+  optional bool unknown_1 = 1;
+  required PlatformVersion platform_version = 2;
+  required DeviceVersion device_version = 3;
+  required bool unknown_4 = 4;
+  optional bool unknown_5 = 5;
+  required string device_id = 6;
+  required string model_name = 7;
+  required string unknown_6 = 8;
+  required string product_color = 9;
+  required string product_sex = 10;
+  required string system_id = 11;
+}
+
+message File {
+  required bool unkown_1 = 1;
+  required string path = 2;
+}
