@@ -34,7 +34,11 @@ def main(file: str) -> None:
     pftp.connect()
     pftp.get_device_info()
     pftp.start_sync()
-    pftp.upload_map(file)
+    try:
+        pftp.upload_map(file)
+    except FileNotFoundError:
+        print("Map file not found")
+        print("Make sure the file exists and the path is correct")
     pftp.stop_sync()
     pftp.disconnect()
 
