@@ -14,7 +14,7 @@ Experimental tool for updating maps on the Polar V650 device.
    ```
 2. Install requrements
    ```sh
-   pip install -r requirements
+   pip install -r requirements.txt
    ```
 
 ### Usage
